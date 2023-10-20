@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat PDF App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Chat PDF App</h1>
+    
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="pdf" accept=".pdf">
+        <button type="submit">Upload PDF</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Extracted Text</h2>
+    <pre id="pdf-text"></pre>
+    
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
